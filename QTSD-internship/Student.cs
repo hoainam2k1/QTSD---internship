@@ -19,9 +19,9 @@ namespace QTSD_internship
             ID = id;
             Class = Class;
         }
-        public override void Display()
+        public override string Display()
         {
-            Console.WriteLine("Name: {0} \nAge: {1} \nAddress: {2} \nID: {3} \nClass: {4}", Name, Age, Address, ID, Class);
+            return String.Format("Name: {0} \nAge: {1} \nAddress: {2} \nID: {3} \nClass: {4}", Name, Age, Address, ID, Class);
         }
     }
 }
