@@ -259,6 +259,15 @@ namespace QTSD_internship
             {
                 Console.WriteLine("Key \"doc\" is not found.");
             }
+
+            //  4 Array
+            string[] studentName = { "Nam", "Viet", "Xuan", "Thien" };
+            int[] a1 = new int[5];
+            int[] a2 = new int[] { 1, 2, 3, 4, 5 };
+            int[,] a3 = new int[2, 3];
+            int[,] a4 = { { 1, 2, 3 }, { 4, 5, 6 } };
+            int[][] a5 = new int[5][];
+            a5[0] = new int[4] { 1, 2, 3, 4 };
         }
         private static void Display(LinkedList<string> words, string test)
         {
