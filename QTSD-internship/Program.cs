@@ -156,6 +156,109 @@ namespace QTSD_internship
             Console.WriteLine();
             Console.WriteLine("Test 17: Clear linked list. Contains 'jumps' = {0}", list.Contains("jumps"));
             Console.ReadLine();
+
+            // 3 Dictionary
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic.Add("txt", "notepad.exe");
+            dic.Add("bmp", "paint.exe");
+            dic.Add("dib", "paint.exe");
+            dic.Add("rtf", "wordpad.exe");
+
+            //An element with Key = "txt" already exists.
+            try
+            {
+                dic.Add("txt", "winword.exe");
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("An element with Key = \"txt\" already exists.");
+            }
+
+            //For key = "rtf", value = wordpad.exe.
+            Console.WriteLine("For key = \"rtf\", value = {0}.", dic["rtf"]);
+
+            //For key = "rtf", value = winword.exe.
+            dic["rtf"] = "winword.exe";
+            Console.WriteLine("For key = \"rtf\", value = {0}.", dic["rtf"]);
+            dic["doc"] = "winword.exe";
+
+            //Key = "tif" is not found.
+            try
+            {
+                Console.WriteLine("For key = \"tif\", value = {0}.", dic["tif"]);
+            }
+            catch (KeyNotFoundException)
+            {
+                Console.WriteLine("Key = \"tif\" is not found.");
+            }
+
+            //Key = "tif" is not found.
+            //Value added for key = "ht": hypertrm.exe
+
+            string value = "";
+            if (dic.TryGetValue("tif", out value))
+            {
+                Console.WriteLine("For key = \"tif\", value = {0}.", value);
+            }
+            else
+            {
+                Console.WriteLine("Key = \"tif\" is not found.");
+            }
+            if (!dic.ContainsKey("ht"))
+            {
+                dic.Add("ht", "hypertrm.exe");
+                Console.WriteLine("Value added for key = \"ht\": {0}", dic["ht"]);
+            }
+
+            //Key = txt, Value = notepad.exe
+            //Key = bmp, Value = paint.exe
+            //Key = dib, Value = paint.exe
+            //Key = rtf, Value = winword.exe
+            //Key = doc, Value = winword.exe
+            //Key = ht, Value = hypertrm.exe
+            Console.WriteLine();
+            foreach (KeyValuePair<string, string> kvp in dic)
+            {
+                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+            }
+
+            //Value = notepad.exe
+            //Value = paint.exe
+            //Value = paint.exe
+            //Value = winword.exe
+            //Value = winword.exe
+            //Value = hypertrm.exe
+            // Get value alone, use values property
+            Dictionary<string, string>.ValueCollection valueColl = dic.Values;
+            Console.WriteLine();
+            foreach (string s in valueColl)
+            {
+                Console.WriteLine("Value = {0}", s);
+            }
+
+            //Key = txt
+            //Key = bmp
+            //Key = dib
+            //Key = rtf
+            //Key = doc
+            //Key = ht
+            // Get key alone, use keys property
+            Dictionary<string, string>.KeyCollection keyColl = dic.Keys;
+            Console.WriteLine();
+            foreach (string s in keyColl)
+            {
+                Console.WriteLine("Key = {0}", s);
+            }
+
+            //Remove("doc")
+            //Key "doc" is not found.
+            Console.WriteLine("\nRemove(\"doc\")");
+            dic.Remove("doc");
+
+            if (!dic.ContainsKey("doc"))
+            {
+                Console.WriteLine("Key \"doc\" is not found.");
+            }
         }
         private static void Display(LinkedList<string> words, string test)
         {
