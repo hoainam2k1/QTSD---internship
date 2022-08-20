@@ -6,7 +6,20 @@ namespace QTSD_internship
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //  1 OOP
+            Person person = new Person();
+            person.Name = "Nguyen Hoai Nam";
+            person.Age = 21;
+            person.Address = "Tra Vinh";
+            person.Display();
+
+            Student student = new Student();
+            student.Name = "Nguyen Hoai Viet";
+            student.Age = 19;
+            student.Address = "Tra Vinh";
+            student.ID = "110119029";
+            student.Class = "DA19TTA";
+            student.Display();
         }
     }
 }
