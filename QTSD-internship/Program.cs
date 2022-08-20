@@ -268,6 +268,48 @@ namespace QTSD_internship
             int[,] a4 = { { 1, 2, 3 }, { 4, 5, 6 } };
             int[][] a5 = new int[5][];
             a5[0] = new int[4] { 1, 2, 3, 4 };
+
+            //  5 List
+            List<Student> students = new List<Student>();
+            students.Add(new Student() { ID = "SV9029", Name = "Nguyen Hoai Nam", Age = 21, Class = "DA19TTA", Address = "Tra Vinh" });
+            students.Add(new Student() { ID = "SV9099", Name = "Nguyen Hoai Viet", Age = 19, Class = "DA21KDA", Address = "Tra Vinh" });
+            Console.WriteLine();
+            foreach (Student std in students)
+            {
+                Console.WriteLine(std.Display());
+            }
+            //Check the list for #SV9030
+            Console.WriteLine("\nContains(\"SV9030\"): {0}", students.Contains(new Student { ID = "SV9030", Name = "", Age = 0, Class = "", Address = "" }));
+
+            // Insert a new item at position 2
+            Console.WriteLine("\nInsert(2, \"SV9031\")");
+            students.Insert(2, new Student() { ID = "SV9031", Name = "Nguyen Thanh Xuan", Age = 21, Class = "DA19TTB", Address = "Tra Vinh" });
+            foreach (Student std in students)
+            {
+                Console.WriteLine(std.Display());
+            }
+
+            Console.WriteLine("\nStudents[2]: {0}", students[2].Display());
+
+            //Console.WriteLine("\nRemove(\"SV9099\")");
+
+            //students.Remove(new Student() { ID = "SV9099" });
+
+            //Console.WriteLine();
+            //foreach (Student student in students)
+            //{
+            //    Console.WriteLine(student.Display());
+            //}
+
+
+            //RemoveAt(2)
+            Console.WriteLine("\nRemoveAt(2)");
+            students.RemoveAt(2);
+            Console.WriteLine();
+            foreach (Student std in students)
+            {
+                Console.WriteLine(std.Display());
+            }
         }
         private static void Display(LinkedList<string> words, string test)
         {

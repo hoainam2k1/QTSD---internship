@@ -21,9 +21,9 @@ namespace QTSD_internship
             Age = age;
             Address = address;
         }
-        public virtual void Display()
+        public virtual string Display()
         {
-            Console.WriteLine("Name: {0} \nAge: {1} \nAddress: {2}", Name, Age, Address);
+            return String.Format("Name: {0} \nAge: {1} \nAddress: {2}", Name, Age, Address);
         }
         public void Create()
         {
