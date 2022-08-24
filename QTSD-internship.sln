@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTSD-internship", "QTSD-internship\QTSD-internship.csproj", "{D487C942-7153-4CC7-B2BA-8E8FC616A3E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QTSD-internship", "QTSD-internship\QTSD-internship.csproj", "{D487C942-7153-4CC7-B2BA-8E8FC616A3E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{ED85B5B3-3B70-4256-A77F-6B3D6233038C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D487C942-7153-4CC7-B2BA-8E8FC616A3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D487C942-7153-4CC7-B2BA-8E8FC616A3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D487C942-7153-4CC7-B2BA-8E8FC616A3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED85B5B3-3B70-4256-A77F-6B3D6233038C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED85B5B3-3B70-4256-A77F-6B3D6233038C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED85B5B3-3B70-4256-A77F-6B3D6233038C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED85B5B3-3B70-4256-A77F-6B3D6233038C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
