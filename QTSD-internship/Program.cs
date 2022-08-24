@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace QTSD_internship
@@ -309,6 +310,23 @@ namespace QTSD_internship
             foreach (Student std in students)
             {
                 Console.WriteLine(std.Display());
+            }
+
+
+            //  6 IEnumrable vs IQueryable
+            var context = new Context("Data Source=LAPTOP-B0628FPQ\\HOAINAM;Initial Catalog=QTSD;Integrated Security=True");
+            IEnumerable<Employees> employees = context.employees.Where(s => s.ID == "SV9029");
+            var topEmployees = employees.Take(1);
+            foreach (Employees e in topEmployees)
+            {
+                Console.WriteLine($"ID - {e.ID} \nName - {e.Name}");
+            }
+
+            IQueryable<Employees> employee = context.employees.Where(s => s.ID == "SV9029");
+            topEmployees = employee.Take(1);
+            foreach(Employees e in topEmployees)
+            {
+                Console.WriteLine($"ID - {e.ID} \nName - {e.Name}");
             }
         }
         private static void Display(LinkedList<string> words, string test)
